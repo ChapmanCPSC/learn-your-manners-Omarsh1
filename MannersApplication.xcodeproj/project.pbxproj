@@ -13,6 +13,11 @@
 		3D12833C1CC5361B00F32375 /* MannersApplication.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D12833A1CC5361B00F32375 /* MannersApplication.xcdatamodeld */; };
 		3D12833E1CC5361B00F32375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D12833D1CC5361B00F32375 /* Assets.xcassets */; };
 		3D1283411CC5361B00F32375 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D12833F1CC5361B00F32375 /* LaunchScreen.storyboard */; };
+		3D1283491CC53B4600F32375 /* Manner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1283481CC53B4600F32375 /* Manner.swift */; };
+		3D12834D1CC5437100F32375 /* MannersDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D12834C1CC5437100F32375 /* MannersDetailViewController.swift */; };
+		3D1283531CC5445C00F32375 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1283521CC5445C00F32375 /* UIImage+Gif.swift */; };
+		3D1283561CC555C100F32375 /* MannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1283541CC555C100F32375 /* MannerTableViewCell.swift */; };
+		3D1283571CC555C100F32375 /* MannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D1283551CC555C100F32375 /* MannerTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		3D12833D1CC5361B00F32375 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D1283401CC5361B00F32375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D1283421CC5361B00F32375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D1283481CC53B4600F32375 /* Manner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manner.swift; sourceTree = "<group>"; };
+		3D12834C1CC5437100F32375 /* MannersDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MannersDetailViewController.swift; sourceTree = "<group>"; };
+		3D1283521CC5445C00F32375 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
+		3D1283541CC555C100F32375 /* MannerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MannerTableViewCell.swift; sourceTree = "<group>"; };
+		3D1283551CC555C100F32375 /* MannerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MannerTableViewCell.xib; path = MannersApplication/MannerTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +67,17 @@
 			isa = PBXGroup;
 			children = (
 				3D1283331CC5361A00F32375 /* AppDelegate.swift */,
-				3D1283351CC5361A00F32375 /* ViewController.swift */,
 				3D1283371CC5361A00F32375 /* Main.storyboard */,
 				3D12833D1CC5361B00F32375 /* Assets.xcassets */,
 				3D12833F1CC5361B00F32375 /* LaunchScreen.storyboard */,
 				3D1283421CC5361B00F32375 /* Info.plist */,
 				3D12833A1CC5361B00F32375 /* MannersApplication.xcdatamodeld */,
+				3D1283481CC53B4600F32375 /* Manner.swift */,
+				3D1283351CC5361A00F32375 /* ViewController.swift */,
+				3D12834C1CC5437100F32375 /* MannersDetailViewController.swift */,
+				3D1283521CC5445C00F32375 /* UIImage+Gif.swift */,
+				3D1283541CC555C100F32375 /* MannerTableViewCell.swift */,
+				3D1283551CC555C100F32375 /* MannerTableViewCell.xib */,
 			);
 			path = MannersApplication;
 			sourceTree = "<group>";
@@ -126,6 +141,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D1283571CC555C100F32375 /* MannerTableViewCell.xib in Resources */,
 				3D1283411CC5361B00F32375 /* LaunchScreen.storyboard in Resources */,
 				3D12833E1CC5361B00F32375 /* Assets.xcassets in Resources */,
 				3D1283391CC5361A00F32375 /* Main.storyboard in Resources */,
@@ -139,8 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D1283561CC555C100F32375 /* MannerTableViewCell.swift in Sources */,
+				3D1283491CC53B4600F32375 /* Manner.swift in Sources */,
 				3D12833C1CC5361B00F32375 /* MannersApplication.xcdatamodeld in Sources */,
+				3D1283531CC5445C00F32375 /* UIImage+Gif.swift in Sources */,
 				3D1283361CC5361A00F32375 /* ViewController.swift in Sources */,
+				3D12834D1CC5437100F32375 /* MannersDetailViewController.swift in Sources */,
 				3D1283341CC5361A00F32375 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +275,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MannersApplication/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Project-X-.MannersApplication";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -266,6 +287,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MannersApplication/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Project-X-.MannersApplication";
 				PRODUCT_NAME = "$(TARGET_NAME)";
