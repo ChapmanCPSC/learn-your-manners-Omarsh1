@@ -18,6 +18,8 @@
 		3D1283531CC5445C00F32375 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1283521CC5445C00F32375 /* UIImage+Gif.swift */; };
 		3D1283561CC555C100F32375 /* MannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1283541CC555C100F32375 /* MannerTableViewCell.swift */; };
 		3D1283571CC555C100F32375 /* MannerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D1283551CC555C100F32375 /* MannerTableViewCell.xib */; };
+		3DAB3D611CD122E9001F3F1A /* SetEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAB3D601CD122E9001F3F1A /* SetEmailViewController.swift */; };
+		3DAB3D631CD12656001F3F1A /* Learner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAB3D621CD12656001F3F1A /* Learner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		3D1283521CC5445C00F32375 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		3D1283541CC555C100F32375 /* MannerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MannerTableViewCell.swift; sourceTree = "<group>"; };
 		3D1283551CC555C100F32375 /* MannerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MannerTableViewCell.xib; path = MannersApplication/MannerTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		3DAB3D601CD122E9001F3F1A /* SetEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetEmailViewController.swift; sourceTree = "<group>"; };
+		3DAB3D621CD12656001F3F1A /* Learner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Learner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,20 +70,38 @@
 		3D1283321CC5361A00F32375 /* MannersApplication */ = {
 			isa = PBXGroup;
 			children = (
-				3D1283331CC5361A00F32375 /* AppDelegate.swift */,
 				3D1283371CC5361A00F32375 /* Main.storyboard */,
+				3DAB3D5E1CD1227C001F3F1A /* VCs */,
+				3DAB3D5F1CD12296001F3F1A /* Classes */,
 				3D12833D1CC5361B00F32375 /* Assets.xcassets */,
+				3D1283541CC555C100F32375 /* MannerTableViewCell.swift */,
+				3D1283551CC555C100F32375 /* MannerTableViewCell.xib */,
+				3D1283331CC5361A00F32375 /* AppDelegate.swift */,
 				3D12833F1CC5361B00F32375 /* LaunchScreen.storyboard */,
 				3D1283421CC5361B00F32375 /* Info.plist */,
 				3D12833A1CC5361B00F32375 /* MannersApplication.xcdatamodeld */,
-				3D1283481CC53B4600F32375 /* Manner.swift */,
-				3D1283351CC5361A00F32375 /* ViewController.swift */,
-				3D12834C1CC5437100F32375 /* MannersDetailViewController.swift */,
-				3D1283521CC5445C00F32375 /* UIImage+Gif.swift */,
-				3D1283541CC555C100F32375 /* MannerTableViewCell.swift */,
-				3D1283551CC555C100F32375 /* MannerTableViewCell.xib */,
 			);
 			path = MannersApplication;
+			sourceTree = "<group>";
+		};
+		3DAB3D5E1CD1227C001F3F1A /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				3D1283351CC5361A00F32375 /* ViewController.swift */,
+				3D12834C1CC5437100F32375 /* MannersDetailViewController.swift */,
+				3DAB3D601CD122E9001F3F1A /* SetEmailViewController.swift */,
+			);
+			name = VCs;
+			sourceTree = "<group>";
+		};
+		3DAB3D5F1CD12296001F3F1A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3D1283481CC53B4600F32375 /* Manner.swift */,
+				3D1283521CC5445C00F32375 /* UIImage+Gif.swift */,
+				3DAB3D621CD12656001F3F1A /* Learner.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,9 +179,11 @@
 			files = (
 				3D1283561CC555C100F32375 /* MannerTableViewCell.swift in Sources */,
 				3D1283491CC53B4600F32375 /* Manner.swift in Sources */,
+				3DAB3D611CD122E9001F3F1A /* SetEmailViewController.swift in Sources */,
 				3D12833C1CC5361B00F32375 /* MannersApplication.xcdatamodeld in Sources */,
 				3D1283531CC5445C00F32375 /* UIImage+Gif.swift in Sources */,
 				3D1283361CC5361A00F32375 /* ViewController.swift in Sources */,
+				3DAB3D631CD12656001F3F1A /* Learner.swift in Sources */,
 				3D12834D1CC5437100F32375 /* MannersDetailViewController.swift in Sources */,
 				3D1283341CC5361A00F32375 /* AppDelegate.swift in Sources */,
 			);
@@ -313,6 +337,7 @@
 				3D1283471CC5361B00F32375 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

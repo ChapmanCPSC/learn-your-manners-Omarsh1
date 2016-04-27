@@ -15,25 +15,25 @@
                 <rect key="frame" x="0.0" y="0.0" width="321" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ZP-DK-pjG">
-                        <rect key="frame" x="0.0" y="0.0" width="244" height="43"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VMs-ra-9Hv">
                         <rect key="frame" x="241" y="8" width="72" height="27"/>
                         <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
                             <rect key="frame" x="252" y="4" width="61" height="35"/>
                         </variation>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ZP-DK-pjG">
+                        <rect key="frame" x="52" y="0.0" width="192" height="43"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="VMs-ra-9Hv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="233" id="4TG-ab-Lav"/>
                     <constraint firstItem="VMs-ra-9Hv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="7xP-rd-TAh"/>
                     <constraint firstItem="VMs-ra-9Hv" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="AER-zA-xEi"/>
                     <constraint firstItem="VMs-ra-9Hv" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="X7d-96-fkS"/>
-                    <constraint firstItem="8ZP-DK-pjG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="dVs-RF-Xcr"/>
+                    <constraint firstItem="8ZP-DK-pjG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="44" id="dVs-RF-Xcr"/>
                     <constraint firstAttribute="trailingMargin" secondItem="8ZP-DK-pjG" secondAttribute="trailing" constant="69" id="nl4-XY-vbz"/>
                     <constraint firstAttribute="bottomMargin" secondItem="8ZP-DK-pjG" secondAttribute="bottom" constant="-8" id="rkE-mT-CVM"/>
                     <constraint firstItem="8ZP-DK-pjG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="sU2-2T-NFa"/>

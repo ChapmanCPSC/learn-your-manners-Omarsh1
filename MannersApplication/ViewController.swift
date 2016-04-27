@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import MessageUI
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MFMailComposeViewControllerDelegate {
     
+    let userDefaults = NSUserDefaults.standardUserDefaults()
     var selectedManner : Manner?
-
-
+    var newMannersLearner : Learner?
     @IBOutlet weak var mannersTableView: UITableView!
     
     var mannersList : [Manner] =
@@ -29,6 +30,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        if let theParentEmail = newMannersLearner?.parentEmail!{
+            userDefaults.setObject(newMannersLearner!.parentEmail!, forKey: "parentEmail")
+        }
+        else{
+            userDefaults.setObject("noEmail", forKey: "parentEmail")
+        }
+        
+        
         mannersTableView.dataSource = self
         mannersTableView.delegate = self
         
@@ -63,6 +73,42 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.reloadData()
         self.performSegueWithIdentifier("toMannerDetail", sender: nil)
         
+    }
+    @IBAction func SendSummaryPressed(sender: UIButton) {
+        if(userDefaults.objectForKey("parentEmail") as! String != "noEmail"){
+            var toSendManners : String = ""
+            var i = 0
+            var mannersLearntCount = 0
+            toSendManners += "Manners learnt recently: \n\n"
+            for manner in mannersList {
+                i = i.advancedBy(1)
+                if (manner.didLearn == true){
+                    mannersLearntCount = mannersLearntCount.advancedBy(1)
+                    toSendManners += "\(i)\(") ")\(manner.name!) \n"
+                }
+            }
+            if(mannersLearntCount == 0){
+                let sendingASummaryAlert =  UIAlertView(title: "No manners were learnt", message: "Go learn your manners!", delegate: self, cancelButtonTitle: "Got it")
+                sendingASummaryAlert.show()
+            }
+            else{
+            toSendManners += "\nThan you for using our manners app!"
+            let mailComposerVC = MFMailComposeViewController()
+            mailComposerVC.mailComposeDelegate = self
+            mailComposerVC.setToRecipients([userDefaults.objectForKey("parentEmail") as! String])
+            mailComposerVC.setSubject("Manners summary update")
+            mailComposerVC.setMessageBody(toSendManners, isHTML: false)
+            self.presentViewController(mailComposerVC, animated: true, completion: nil)
+                }
+            }
+        else{
+            let sendingASummaryAlert =  UIAlertView(title: "Please set an email first", message: "No valid email was found", delegate: self, cancelButtonTitle: "Got it")
+            sendingASummaryAlert.show()
+        }
+    }
+    
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        self.dismissViewControllerAnimated(false, completion: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
